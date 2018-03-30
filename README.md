@@ -2,7 +2,7 @@
 Project IoT with real time and NodeJS 8
 
 
-Init a module
+1. Init a module data base 
  ```bash 
 $ npm init 
 package name: (realtimenodejs-db) 
