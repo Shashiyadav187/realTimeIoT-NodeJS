@@ -4,7 +4,8 @@
   "description": "A simple IOT platform -Data Base Module",
   "main": "index.js",
   "scripts": {
-    "test": "https://github.com/sumelio/realTimeIoT-NodeJS/"
+    "lint": "standard",
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,13 @@
   "bugs": {
     "url": "https://github.com/sumelio/realTimeIoT-NodeJS/issues"
   },
-  "homepage": "https://github.com/sumelio/realTimeIoT-NodeJS#readme"
+  "homepage": "https://github.com/sumelio/realTimeIoT-NodeJS#readme",
+  "devDependencies": {
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.37.5"
+  }
 }
