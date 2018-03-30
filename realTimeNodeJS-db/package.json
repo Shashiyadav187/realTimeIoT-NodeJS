@@ -1,0 +1,27 @@
+{
+  "name": "realtimenodejs-db",
+  "version": "1.0.0",
+  "description": "A simple IOT platform -Data Base Module",
+  "main": "index.js",
+  "scripts": {
+    "test": "https://github.com/sumelio/realTimeIoT-NodeJS/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumelio/realTimeIoT-NodeJS.git"
+  },
+  "keywords": [
+    "Internet",
+    "Of",
+    "Thing",
+    "Node",
+    "Postgres",
+    "Redis"
+  ],
+  "author": "freddy lemus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sumelio/realTimeIoT-NodeJS/issues"
+  },
+  "homepage": "https://github.com/sumelio/realTimeIoT-NodeJS#readme"
+}
