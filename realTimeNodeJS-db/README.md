@@ -36,5 +36,19 @@ Install standard module "standard": "^11.0.1"
  Execute sript
 
 ``` bash
- npm i sequelize pg pg-hstore --save
+ npm run setup
  ``` 
+
+ inquirer, let us ask questions
+
+ chalk look and fell
+
+``` bash
+ npm i inquirer chalk --save
+```
+
+ Test with fake passoword 
+``` bash
+ $ DB_PASS='nose' npm run setup
+```
+ 
