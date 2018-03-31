@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('realTimeNodeJS:db:setup')
+const debug = require('debug')('realTimeNodeJS-db:db:setup')
 const db = require('./')
 
 async function setup () {
