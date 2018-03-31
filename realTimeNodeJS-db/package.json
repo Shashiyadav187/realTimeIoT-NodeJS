@@ -1,36 +1,29 @@
 {
-  "name": "realtimenodejs-db",
+  "name": "platziverse-db",
   "version": "1.0.0",
-  "description": "A simple IOT platform -Data Base Module",
+  "description": "A Simple IoT Platform - DB Module",
   "main": "index.js",
   "scripts": {
-    "lint": "standard",
-    "test": ""
+    "setup": "DEBUG=platziverse:* node setup.js",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sumelio/realTimeIoT-NodeJS.git"
+    "url": "git+https://github.com/platzi/platziverse.git"
   },
-  "keywords": [
-    "Internet",
-    "Of",
-    "Thing",
-    "Node",
-    "Postgres",
-    "Redis"
-  ],
-  "author": "freddy lemus",
+  "author": "Julian Duque <julianduquej@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sumelio/realTimeIoT-NodeJS/issues"
+    "url": "https://github.com/platzi/platziverse/issues"
   },
-  "homepage": "https://github.com/sumelio/realTimeIoT-NodeJS#readme",
+  "homepage": "https://github.com/platzi/platziverse#readme",
   "devDependencies": {
-    "standard": "^11.0.1"
+    "standard": "^10.0.3"
   },
   "dependencies": {
-    "pg": "^7.4.1",
+    "debug": "^2.6.8",
+    "pg": "^7.1.0",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.37.5"
+    "sequelize": "^4.4.2"
   }
 }
