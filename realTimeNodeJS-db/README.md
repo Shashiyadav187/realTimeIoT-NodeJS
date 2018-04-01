@@ -79,6 +79,6 @@ npm install --save-dev sinon
  MOck the requires
 
 ``` bash
-npm i proxyrequire --save-dev
+npm i proxyquire --save-dev
 
 ```

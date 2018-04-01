@@ -2,6 +2,7 @@
 
 const test = require('ava')
 const proxyquire = require('proxyquire')
+
 let config = {
     loggin: function() {}
 }
@@ -11,8 +12,8 @@ let MetricStub = {
 }
 
 let AgentStub = null
-
 let db = null
+
 test.beforeEach(async () => {
     AgentStub = {
         hasMany: function () {}
