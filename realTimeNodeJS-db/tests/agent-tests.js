@@ -17,19 +17,32 @@ let MetricStub = {
 // Get one instance 
 let single = Object.assign({}, agentFixtures.single)
 let id = 1
+let uuid = 'yyyy-yyyy-yyyy'
 let AgentStub = null
 let db = null
 let sandbox = null
+
+let uuidArgs = {
+    where: {
+        uuid
+    }
+}
 
 test.beforeEach(async () => {
     sandbox = sinon.sandbox.create()
     AgentStub = {
         hasMany: sandbox.spy()
     }
+    // Model findOne Stub
+    AgentStub.findOne = sandbox.stub()
+    AgentStub.findOne.withArgs(uuidArgs).returns(Promise.resolve(agentFixtures.byUuid(uuid)))
     // Model findById Stub
     AgentStub.findById = sandbox.stub()
     AgentStub.findById.withArgs(id).returns(Promise.resolve(agentFixtures.byId(id)))
 
+    AgentStub.update = sandbox.stub()
+    AgentStub.update.withArgs(single, uuidArgs).returns(Promise.resolve(single))
+    
     const setupDatabse = proxyquire('../', {
         './models/agent': () => AgentStub,
         './models/metric': () => MetricStub
@@ -61,3 +74,10 @@ test.serial('Agent#findById', async t => {
 
    t.deepEqual(agent, agentFixtures.byId(id), 'Should be the same')
 })
+
+ test.serial('Agent#createOrUpdate - exists', async t => {
+     let agent = await db.Agent.createOrUpdate(single)
+
+     t.deepEqual(agent, single, 'Agent should be the same')
+ })
+
