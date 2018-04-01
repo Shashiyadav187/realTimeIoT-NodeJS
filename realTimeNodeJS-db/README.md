@@ -51,4 +51,34 @@ Install standard module "standard": "^11.0.1"
 ``` bash
  $ DB_PASS='nose' npm run setup
 ```
- 
+
+Unit test
+``` bash
+npm install --save-dev ava
+ ```
+
+Create values by default with this module
+
+Unit defaults
+``` bash
+npm install --save defaults
+```
+
+Install sqlite3 by defults unit test
+``` bash
+npm install sqlite3 --save-dev
+```
+
+Create fake objects or Modules with sinon
+
+``` bash
+npm install --save-dev sinon
+
+```
+
+ MOck the requires
+
+``` bash
+npm i proxyrequire --save-dev
+
+```
