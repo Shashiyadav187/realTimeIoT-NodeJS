@@ -130,3 +130,9 @@ undefined
 > 
 
 ```
+
+ A collection of reporters, providing both terminal and HTML outpu
+
+``` bash
+npm i nyc --save-dev
+```
