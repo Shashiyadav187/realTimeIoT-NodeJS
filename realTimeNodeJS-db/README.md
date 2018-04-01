@@ -76,9 +76,57 @@ npm install --save-dev sinon
 
 ```
 
- MOck the requires
+ Mock  requires
 
 ``` bash
 npm i proxyquire --save-dev
+
+```
+
+Execute test 
+
+``` bash
+npm test
+
+```
+
+Execute fxitures 
+
+``` bash
+
+/realTimeNodeJS-db$ node
+> var agentFixtures = require('./tests/fixtures/agent')
+> agentFixtures.byId(1)
+{ id: 1,
+  uuid: 'yyyy-yyyy-yyyy',
+  name: 'fixture',
+  username: 'userTest',
+  hostname: 'test-host',
+  pid: 1212,
+  connected: true,
+  createAt: 2018-04-01T01:38:29.691Z,
+  updateAt: 2018-04-01T01:38:29.691Z }
+> 
+``` 
+
+Test with Sinon
+``` bash
+$ node
+> var sinon = require('sinon')
+undefined
+> var findById = sinon.stub()
+undefined
+> findById()
+undefined
+> findById(1)
+undefined
+> findById(2)
+undefined
+> findById.withArgs(1).returns('TestIoT')
+....
+...
+> findById(1)
+'TestIoT'
+> 
 
 ```
